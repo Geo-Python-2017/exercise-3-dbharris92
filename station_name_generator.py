@@ -10,8 +10,10 @@ basename = "Station"
 filenames = []
 
 
-### iterate number range 0-20
+###iterate over number rance 0-20
 for number in range(21):
-    station = (basename,number,'.txt')
-
-
+      ###create a variable to add onto interated #s
+      station = basename + '_' + str(number) + '.txt'
+      ###append to list
+      filenames.append(station)  
+print(filenames)
