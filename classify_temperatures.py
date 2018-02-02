@@ -51,14 +51,14 @@ warm = []
 #  3. Comfortable --> temperatures between +2 and +15 degrees (Celsius)
 #  4. Warm --> temperatures above +15 degrees (Celsius)
 # ------------------------------------------------------------------------------------------
-for t in range(len(temperatures)):
-    if t < -2:
+for t in temperatures:
+    if t < -2.0:
         cold.append(t)
-    if t > -2 and t < 2:
+    elif t >= -2.0 and t < 2.0:
         slippery.append(t)
-    if t > 2 and t < 15:
+    elif t >= 2.0 and t < 15.0:
         comfortable.append(t)
-    elif t > 15:
+    elif t >= 15.0:
         warm.append(t)
     
 # Task 3 - Questions - Print the answers
@@ -100,18 +100,18 @@ evening = []
 
 # 2. Iterate over the temperature values and add the temperatures to corresponding lists
 
-for t in range(len(temperatures)):
-    if range(0, 90, 3):
-        night.append(t)
-    if range(1, 90, 3):
-        day.append(t)
-    elif range(2, 90, 3):
-        evening.append(t)
+#index
+i = 0
+for t in temperatures:
+    
+        
+        
+        
         
 # 3. What was the mean day-time temperature in April 2013?
 
 # Add your code here that answers to the question
-mean_temperature = ((sum(day) / float(30.0)))
+mean_temperature = ((sum(day) / 30.0))
 print("Mean day-time temperature was", mean_temperature)
                                                          
                                                          
