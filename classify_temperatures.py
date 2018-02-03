@@ -92,22 +92,24 @@ print('In April 2013 it was comfortable', comfortable_times, 'times.')
 # and the third for evening (16-24) temperatures at day 1,
 # whereas the fourth value is temperature for night-time (00-08) on the next day (day 2), etc.
 
-# 1. Create empty lists for night, day, and evening temperatures
+# 1. Create lists for night, day, and evening temperatures. method #1 use slicing
 
-night = []
-day = []
-evening = []
+night = temperatures[0::3]
+day = temperatures[1::3]
+evening = temperatures[2::3]
 
-# 2. Iterate over the temperature values and add the temperatures to corresponding lists
+###lists for solution #2
+#night = []
+#day = []
+#evening = []
 
-#index
-i = 0
-for t in temperatures:
-    
-        
-        
-        
-        
+### 2. Iterate over the temperature values and add the temperatures to corresponding lists
+### Not necessary, but 'generic solution'
+### unknown
+
+
+
+      
 # 3. What was the mean day-time temperature in April 2013?
 
 # Add your code here that answers to the question
