@@ -86,34 +86,38 @@ for i in range(n):
     if lat < NScutoff:
         if lon < EWcutoff:
             SW.append(station)
-        else:
-            SE.append(station)
+        else: SE.append(station)
+
+    if lat > NScutoff:
+        if lon > EWcutoff:
+            NW.append(station)
+        else: NE.append(station)
+      
         
-        
-        
-    
-    
-    # Add your code here
     
 
 # Step 3 - Print the station names at each geographical zone
 # ----------------------------------------------------------
 
-# Replace the XXX with your list names
-#print("The names of the North-West stations are:\n", XXX)
-#print("The names of the North-East stations are:\n", XXX)
-#print("The names of the South-West stations are:\n", XXX)
-#print("The names of the South-East stations are:\n", XXX)
+print("The names of the North-West stations are:\n", NW)
+print("The names of the North-East stations are:\n", NE)
+print("The names of the South-West stations are:\n", SW)
+print("The names of the South-East stations are:\n", SE)
 
 # Step 4 (optional) - Print the share of stations at each geographical zone (in percentages)
 # ------------------------------------------------------------------------------------------
-
+nw_count=len(NW)
+ne_count=len(NE)
+sw_count=len(SW)
+se_count=len(SE)
+s_count=len(stations)
 # Step 4.1 - Calculate the share for different zones
 # Fix the code (replace 0.0 with the result of the calculation)
-nw_share = 0.0
-ne_share = 0.0
-sw_share = 0.0
-se_share = 0.0
+
+nw_share = (nw_count / s_count* 100)
+ne_share = (ne_count / s_count* 100) 
+sw_share = (sw_count / s_count* 100)
+se_share = (se_count / s_count * 100)
 
 # Print the information (you don't need to modify this)
 print("North-West contains", nw_share, "% of all stations.")
